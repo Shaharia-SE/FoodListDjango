@@ -16,10 +16,12 @@ def index(request):
     return render(request, 'food/index.html', contex)
 
 
+"""
 class IndexClassView(ListView):
     model = Item;
     template_name = 'food/index.html'
     context_object_name = 'item_list'
+"""
 
 
 def item(request):

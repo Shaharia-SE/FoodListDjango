@@ -14,6 +14,6 @@ urlpatterns = [
     # edit
     path('update/<int:id>/', views.update_item, name='update_item'),
     # delete
-    path('delete/<int:id>/', views.delete_item, name='delete_item'),
+    path('delete/<int:id>/', views.delete_item, name='delete_item')
 
 ]
