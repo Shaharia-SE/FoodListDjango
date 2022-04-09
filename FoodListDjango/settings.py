@@ -120,7 +120,8 @@ static = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [static]
 LOGIN_REDIRECT_URL = 'foodApp:index'
 LOGIN_URL = 'login'
-MEDIA_URL = os.path.join(BASE_DIR, 'pictures')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pictures')
+#MEDIA_URL = os.path.join(BASE_DIR, 'pictures')
 MEDIA_URL = '/pictures/'
 
 # Default primary key field type
