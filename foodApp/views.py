@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import Item
 from django.template import loader
 from .forms import ItemForm
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 
 # create view
@@ -16,12 +18,10 @@ def index(request):
     return render(request, 'food/index.html', contex)
 
 
-"""
 class IndexClassView(ListView):
     model = Item;
     template_name = 'food/index.html'
     context_object_name = 'item_list'
-"""
 
 
 def item(request):
@@ -36,6 +36,12 @@ def detail(request, item_id):
     }
 
     return render(request, 'food/detail.html', context)
+
+
+class FoodDetail(DetailView):
+    model = Item
+    template_name = 'food/detail.html'
+    # context_object_name = 'item_detail'
 
 
 def create_item(request):
