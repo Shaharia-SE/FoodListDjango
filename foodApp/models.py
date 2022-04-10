@@ -16,4 +16,8 @@ class Item(models.Model):
     item_image = models.CharField(max_length=500, default="")
 
     def get_absolute_url(self):
+
         return reverse("food:detail", kwargs={"pk": self.pk})
+
+
+        #return reverse("food:detail", kwargs={"pk": self.pk})

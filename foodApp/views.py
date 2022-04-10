@@ -58,8 +58,10 @@ class CreateItem(CreateView):
     model = Item;
     fields = ['item_name', 'item_desc', 'item_price', 'item_image']
     template_name = 'food/item-form.html'
+
     def form_valid(self, form):
         form.instance.user_name = self.request.user
+
         return super().form_valid(form)
 
 
